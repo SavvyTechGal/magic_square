@@ -1,2 +1,9 @@
-Implicient errors:
+implicit errors:
+```
+I placed 3 implicit errors
 
+1st on line 38 -> Magic Constant is not returned correctly because python does not correctly use ^. Make sure to change that to **. This one I did accidentally on my own. And it was not immediately obvious to me. This one is syntaxically which I believe is also implicit. 
+
+2nd on line 43. We are expecting a magic square starting from 1. (the code will still produce a magic square, but not one with the specific constraints we gave... our constraints, must add up to our magic constant formula (which also expects starting from 1.)) This one wasn't immediately obvious, must realize why we are getting Magic Square false, and why our magic constant is not the same as what should seemingly be the magic constant. 
+
+3rd a bit more tricky. For the case on line 55, you need to know the previous location that we inserted a number. Currently, we are losing that position by incrementing curr_row and curr_col dircectly. We can resolve this by creating temp_row and temp_col and only assigning curr_col and curr_row after checking every case, or we can purhaps stor curr_row and curr_col in a their temp vars first... increment them all, and then assign back in this case. I will see what my classmates come up with. This one may not stand out right away. It requires knowing how magic squares are created and following the formula to a T. It results in the numbers being inserted in the wrong places. 
