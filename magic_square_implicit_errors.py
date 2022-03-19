@@ -18,10 +18,7 @@ def check_sums(square, n, magic_constant) -> bool:
         if i != magic_constant:
             return 'False'
 
-    if first_diag_sum != magic_constant:
-        return 'False'
-
-    if second_diag_sum != magic_constant:
+    if (first_diag_sum != magic_constant) or (second_diag_sum != magic_constant):
         return 'False'
     
     return 'True'
